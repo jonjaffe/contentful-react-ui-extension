@@ -7,7 +7,8 @@ class App extends Component {
     super(props);
     this.state = {
       api: {},
-      value: ""
+      value: "",
+      results: null
     };
   }
 
@@ -37,18 +38,8 @@ class App extends Component {
 
     return (
       <div className="App">
-        <input
-          className="cf-form-input"
-          type="text"
-          value={value}
-          onChange={this.handleChangeValue}
-        />
-        <button
-          className="update-button cf-btn-primary"
-          onClick={this.handleClickUpdate}
-        >
-          Update
-        </button>
+        <input className="cf-form-input" type="text" value={value} onChange={this.handleChangeValue} />
+        <button className="update-button cf-btn-primary" onClick={this.handleClickUpdate}>Update</button>
       </div>
     );
   }
